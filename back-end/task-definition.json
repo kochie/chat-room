@@ -1,0 +1,33 @@
+{
+    "family": "chat-room",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+      {
+        "name": "chat-room",
+        "image": "chat-room",
+        "essential": true,
+        "portMappings": [
+            {
+                "containerPort": 3001,
+                "hostPort": 3001,
+                "protocol": "tcp"
+            }
+        ],
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-create-group": "true",
+                "awslogs-region": "ap-southeast-2",
+                "awslogs-group": "ecs",
+                "awslogs-stream-prefix": "chatRoom"
+            }
+        }
+      }
+    ],
+    "requiresCompatibilities": [
+      "FARGATE"
+    ],
+    "executionRoleArn": "chatRoomTaskExecutionRole",
+    "cpu": "256",
+    "memory": "512"
+  }
