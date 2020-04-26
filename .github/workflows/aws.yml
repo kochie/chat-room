@@ -76,5 +76,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: chat-room-backend
-        cluster: default
+        cluster:  discord-bot-police
         wait-for-service-stability: true
