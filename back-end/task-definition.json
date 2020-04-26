@@ -1,9 +1,9 @@
 {
-    "family": "chat-room",
+    "family": "chat-room-backend",
     "networkMode": "awsvpc",
     "containerDefinitions": [
       {
-        "name": "chat-room",
+        "name": "chat-room-backend",
         "image": "chat-room",
         "essential": true,
         "portMappings": [
