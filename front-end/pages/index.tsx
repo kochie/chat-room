@@ -3,7 +3,7 @@ import Head from 'next/head'
 import io from 'socket.io-client';
 
 export default function Home() {
-    const socket = io("https://api.chat.kochie.io", {path: '/chat-room-backend/socket.io'});
+    const socket = io("https://api.chat.kochie.io");
     // const socket = io()
     const [text, setText] = useState("")
     const [messages, setMessages] = useState([])
